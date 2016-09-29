@@ -7,6 +7,7 @@ $routs = [
 ];
 
 if( $_SERVER['REQUEST_URI'] != '/' ) {
+   $aaaa=  $_SERVER['REQUEST_URI'];
     $urlArray = explode('/', $_SERVER['REQUEST_URI']);
     $urlArray = array_filter($urlArray);
     $action = $urlArray[1];

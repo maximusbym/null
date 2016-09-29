@@ -7,6 +7,8 @@ include "user_check.php";
 define( "MESSAGE_PATH", 'database/info.txt');
 //define("FILE_TXT_PATH", 'database/form2db.txt');
 // Function helpers
+include "config.php";
+
 include "helpers.php";
 // routing for site
 include "routing.php";

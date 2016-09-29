@@ -1,16 +1,7 @@
-<?php
-foreach( as $val ) {
-echo $val['name'].'<br/>';
-echo $val['email'].'<br/>';
-echo $val['messages'].'<br/>';
-echo '<hr/>';
-}
-?>      
-
-<form action="" method="POST">
+<form action="/guest" method="POST">
 
         <label> Name: </label>
-        <input type="text" name="name">
+        <input type="text" name="name" value="<?=$_COOKIE['name']?>">
         <br/>
         <br/>
         <label> Email: </label>
@@ -25,3 +16,13 @@ echo '<hr/>';
         <input type="submit" value="Push me" />
 
 </form>
+<hr>
+<?php
+var_dump($_COOKIE);
+foreach($data as $val ) {
+        echo "Name: ".$val[0].'<br/>';
+        echo "Email: ".$val[1].'<br/>';
+        echo "Message: ".$val[2].'<br/>';
+        echo '<hr/>';
+}
+?>

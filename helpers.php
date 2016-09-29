@@ -3,7 +3,8 @@ function validate( $array ) {
 	foreach($array as $key => $val) {
 	
 		// lenght
-		if( $key == 'name' ) {
+        //name
+		if( $key == '0' ) {
 			if ( strlen($val) > 255 ) {
 				echo "<h3>error: so more chars, stop and write less </h3>";
 				
@@ -12,14 +13,14 @@ function validate( $array ) {
 			}
 		}
 		// email
-		if( $key == 'email' ) {
+		if( $key == '1' ) {
 
-            if(!preg_match("/@/",$val || strlen($val) > 255)){
+            if(!preg_match("/@/",$val)|| strlen($val) > 255){
 				echo "<h3>error: wrong email</h3>";
 				return false;
 			}
 		}		
-		if( $key == 'messages' ) {
+		if( $key == '2' ) {
 			if( strlen( trim( $val ) ) > 5000 ) {
 				echo "<h3>error: string too long</h3>";
 				return false;
@@ -49,7 +50,7 @@ function save( $data, $path ) {
 		$messageNEW = $messageOLD;
 		array_push($messageNEW, $data);
 	}
-	
+
 	// save and serialize
 	$file = file_put_contents($path, serialize( $messageNEW ));
 
@@ -70,6 +71,7 @@ function read( $path ) {
 		return [];
 	}
 }
+
 
 // Измененние в тексте перед выводом
 function textChange( $array ) {
