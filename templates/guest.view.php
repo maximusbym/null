@@ -13,6 +13,7 @@
                     url: $form.attr('action'),
                     // ?????
                 }).done(function() {
+                    ajax.reload();
                     alert('all done, sent');
                     console.log('success');
                 }).fail(function() {

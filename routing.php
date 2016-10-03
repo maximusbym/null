@@ -3,7 +3,8 @@ $routs = [
     'form2',
     'login',
     'admin',
-    'guest'
+    'guest',
+    'localhost/getMessages.json'
 ];
 
 if( $_SERVER['REQUEST_URI'] != '/' ) {
