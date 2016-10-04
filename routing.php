@@ -4,14 +4,18 @@ $routs = [
     'login',
     'admin',
     'guest',
-    'localhost/getMessages.json'
+    'getMessages',
+    'postMessages'
 ];
 
 if( $_SERVER['REQUEST_URI'] != '/' ) {
 
     $urlArray = explode('/', $_SERVER['REQUEST_URI']);
+
+    $urlArray = explode('?', $urlArray[1]);
+
     $urlArray = array_filter($urlArray);
-    $action = $urlArray[1];
+    $action = $urlArray[0];
     if( isset($urlArray[2]) ) {
         $subAction = $urlArray[2];
     }

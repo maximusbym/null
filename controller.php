@@ -1,9 +1,8 @@
 <?php
 
 include "controllers/guest.controller.php";
+include "controllers/postmessages.controller.php";
+include "controllers/json.controller.php";
 include "controllers/main.controller.php";
-if ($action == 'localhost/getMessages.json'){
-    header('Content-Type: application/json');
-    echo json_encode( 'data' => $messages );
-}
+
 

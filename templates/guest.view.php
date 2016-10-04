@@ -1,19 +1,22 @@
 <script>
     $(document).ready(function() {
-        $('#example').DataTable( {
-            "ajax": "database/arrays.txt"
+
+        var table = $('#example').DataTable( {
+            "ajax": "/getMessages"
         } );
-    } );
-        $(function() {
+
             $('form').submit(function(e) {
                 var $form = $(this);
                 $.ajax({
-                    type: $form.attr('method'),
+                    type: "POST",
                     dataType: "json",
-                    url: $form.attr('action'),
-                    // ?????
-                }).done(function() {
-                    ajax.reload();
+                    url: "/postMessages",
+                    data: $form.serialize()
+                    //
+                }).done(function(data) {
+
+                    console.log(data);
+                    table.ajax.reload();
                     alert('all done, sent');
                     console.log('success');
                 }).fail(function() {
@@ -25,6 +28,9 @@
             });
         });
 </script>
+
+
+
 <table id="example" class="display" width="100%" cellspacing="0">
     <thead>
     <tr>
@@ -56,12 +62,18 @@
 </div>
 <hr>
 <?php
-var_dump($data);
-foreach($data as $val ) {
-    echo "<div class='container'>";
-        echo "<strong>Name:</strong> ".$val[0].'<br/>';
-        echo "<strong>Email:</strong>".$val[1].'<br/>';
-        echo "<strong>Message:</strong><em>".$val[2].'</em><br/>';
-        echo '</div> <hr/>';
-}
-?>
+//var_dump($data);
+//foreach($data as $val ) {
+//    echo "<div class='container'>";
+//        echo "<strong>Name:</strong> ".$val[0].'<br/>';
+//        echo "<strong>Email:</strong>".$val[1].'<br/>';
+//        echo "<strong>Message:</strong><em>".$val[2].'</em><br/>';
+//        echo '</div> <hr/>';
+//}
+////
+//$.ajax({
+//                    type: "POST",
+//                    dataType: $form.attr('method'),
+//                    url: "/guest",
+//                    data: $form.serialize()
+//                    //

@@ -13,14 +13,9 @@ if( $action == 'guest' ){
                 }
         }
 
-        // Делаем выборку с файла, что бы показать юзеру
         $messages = read(MESSAGE_PATH);
         if (!empty($newMessages)) {
             $messages = textChange($newMessages);
         }
-//        if(mail($config['admin_email'], 'subject is form',"name {$nameForm} and bla bla")){
-//            echo "mail send";
-//        }
-//        else echo "mail not send<hr>";
-        view('guest', $messages);
+        view('guest');
     }
