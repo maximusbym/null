@@ -29,8 +29,6 @@
         });
 </script>
 
-
-
 <table id="example" class="display" width="100%" cellspacing="0">
     <thead>
     <tr>
@@ -56,11 +54,10 @@
         <textarea name="messages" id="comment"  class="form-control" tabindex="4"></textarea>
     </div>
         <input type="submit" value="Push me" id="submit" class="btn btn-default"/>
-
 </form>
-
 </div>
 <hr>
+
 <?php
 //var_dump($data);
 //foreach($data as $val ) {
