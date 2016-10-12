@@ -8,8 +8,6 @@ include "controllers/postmessages.controller.php";
 include "controllers/catalog.controller.php";
 include "controllers/json.controller.php";
 include "controllers/main.controller.php";
-if ($action == 'catalog'){
-    echo 'yesssss';
-}
+
 
 

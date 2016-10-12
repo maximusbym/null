@@ -3,7 +3,7 @@
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-include  "database.php";
+//include  "database.php";
 function RandName(){
     $randUserName = ['Max','Vitaliy', 'Dmitriy', 'Andriy', 'Katya',
         'Ne Katya', 'Yanukovich', 'Putin', 'Ne Putin', 'Misha'];
@@ -78,7 +78,18 @@ function Randtext(){
 function RandRating(){
     return $rand = rand(0, 200);
 }
-
+//$insertProducts = $pdo->prepare("INSERT INTO products(`title`, `description`, `price`, `category_id`)
+// VALUES(:title, :description, :price, :category_id)");
+//for ($i =0;$i<25;$i++){
+//echo $i;
+//    $insertProducts->execute(array('title' => RandTitle2(), 'description' => Randtext(), 'price' => RandPrice(),
+//        'category_id' => RandID()));
+//    var_dump(array('title' => RandTitle2(), 'description' => Randtext(), 'price' => RandPrice(),
+//        'category_id' => RandID()));
+//}
+//echo "yes";
+//die();
+/**
 // $insert = $pdo->prepare("INSERT INTO products(`description`,`price`, `categoty_id`) VALUES(?)");
 $insertCategories = $pdo->prepare("INSERT INTO categories(`title`) VALUES (?)" );
 $insertUsers = $pdo->prepare("INSERT INTO users(`name`,`email`,`login`, `password`, `last_activity`) 
@@ -91,7 +102,7 @@ $insertOrders = $pdo->prepare("INSERT INTO orders(`user_id`, `product_id`,`creat
  VALUES(:user_id, :product_id,:created_at, :delivered_at, :status, :total_price)");
 $insertReviews = $pdo->prepare("INSERT INTO reviews(`user_id`, `product_id`,`created_at`, `text`, `rating`)
  VALUES(:user_id, :product_id,:created_at, :text, :rating)");
-//user_id INT, product_id INT, created_at DATETIME, text text(5000), rating smallint
+// user_id INT, product_id INT, created_at DATETIME, text text(5000), rating smallint
 for ($i = 0; $i < 10;$i++){
     $insertCategories->execute(array(RandTitle($i)));
     $idLastCategory = $pdo->lastInsertId();

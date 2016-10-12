@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="templates/css/bootstrap.css">
-    <link rel="stylesheet" href="templates/css/mystyle.css">
+    <link rel="stylesheet" href="/templates/css/bootstrap.css">
+    <link rel="stylesheet" href="/templates/css/mystyle.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
     <title>title</title>
 </head>
