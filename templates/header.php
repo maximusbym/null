@@ -24,8 +24,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">General</a></li>
                 <li><a href="/catalog">Catalog</a></li>
-                <li><a href="/guest">Registration</a></li>
-                <li><a href="/guest">Log in</a></li>
+                <li><a href="/registration">Registration</a></li>
+                <li><a href="/login">Log in</a></li>
             </ul>
         </div>
     </div>

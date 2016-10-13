@@ -1,6 +1,6 @@
 <?php
 $routs = [
-    'form2',
+    'registration',
     'login',
     'admin',
     'guest',

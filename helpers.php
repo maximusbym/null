@@ -4,7 +4,7 @@ function validate( $array ) {
 	
 		// lenght
         //name
-		if( $key == '0' ) {
+		if( $key == 0 || $key == 2 ) {
 			if ( strlen($val) > 255 ) {
 				echo "<h3>error: so more chars, stop and write less </h3>";
 				
@@ -13,19 +13,29 @@ function validate( $array ) {
 			}
 		}
 		// email
-		if( $key == '1' ) {
+		if( $key == 1) {
 
             if(!preg_match("/@/",$val)|| strlen($val) > 255){
 				echo "<h3>error: wrong email</h3>";
 				return false;
 			}
-		}		
-		if( $key == '2' ) {
-			if( strlen( trim( $val ) ) > 5000 ) {
-				echo "<h3>error: string too long</h3>";
-				return false;
-			}
 		}
+		// login
+//		if( $key == 'login' ) {
+//            if ( strlen($val) > 255 ) {
+//                echo "<h3>error: so more chars, stop and write less </h3>";
+//                //invalid
+//                return false;
+//            }
+//		}
+		//password
+        if ($key == 4){
+            if ( strlen($val) < 6 ) {
+                echo "<h3>error: write more longer pass </h3>";
+                //invalid
+                return false;
+            }
+        }
 	}
 	
 // true, welcome
