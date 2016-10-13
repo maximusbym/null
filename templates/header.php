@@ -23,8 +23,9 @@
         <div class="collapse navbar-collapse" id="responsive-menu">
             <ul class="nav navbar-nav">
                 <li><a href="/">General</a></li>
-                <li><a href="/guest">log in</a></li>
-
+                <li><a href="/catalog">Catalog</a></li>
+                <li><a href="/guest">Registration</a></li>
+                <li><a href="/guest">Log in</a></li>
             </ul>
         </div>
     </div>

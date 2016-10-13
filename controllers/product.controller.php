@@ -1,4 +1,5 @@
 <?php
 if ($action == 'product' && $idRout){
-    view('product');
+    $product = getProductById($pdo ,$idRout);
+    view('product', $product);
 }
