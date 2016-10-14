@@ -7,7 +7,7 @@ if($action == 'registration'){
 
     if ($nameForm && $emailForm && $loginForm && $passwordForm) {
 
-       $checkForUnique = CheckUniqueUser($pdo,$emailForm,$loginForm);
+       $checkForUnique = checkUniqueUser($pdo,$emailForm,$loginForm);
         if(empty($checkForUnique)){
             $dataForm = [$nameForm,$emailForm,$loginForm, $passwordForm];
             $isValid = validate($dataForm);

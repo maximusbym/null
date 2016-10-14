@@ -1,18 +1,14 @@
 <?php
-ini_set('display_errors',1);
-error_reporting(E_ALL);
-
-include "database.php";
+// start session
+session_start();
+// all configuration
 include "config.php";
-
-define( "MESSAGE_PATH", 'database/info.txt');
-// define("FILE_TXT_PATH", 'database/form2db.txt');
+// connector for MySQL
+include "database.php";
 // Function helpers
 include "repository.php";
-include "config.php";
-
+// custom function
 include "helpers.php";
-
 // routing for site
 include "routing.php";
 // business logic

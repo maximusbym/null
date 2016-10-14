@@ -27,7 +27,7 @@ function RandID(){
 }
 function RandRole(){
     $random = rand(1,10);
-    if ($random >= 8) {
+    if ($random >= 10) {
         return 'admin';
     }
     else return 'customer';
@@ -78,22 +78,24 @@ function Randtext(){
 function RandRating(){
     return $rand = rand(0, 200);
 }
-//$insertProducts = $pdo->prepare("INSERT INTO products(`title`, `description`, `price`, `category_id`)
-// VALUES(:title, :description, :price, :category_id)");
-//for ($i =0;$i<25;$i++){
-//echo $i;
-//    $insertProducts->execute(array('title' => RandTitle2(), 'description' => Randtext(), 'price' => RandPrice(),
-//        'category_id' => RandID()));
+$insertUsers = $pdo->prepare("INSERT INTO users(`name`,`role`,`email`,`login`, `password`, `last_activity`) 
+VALUES(:name, :role, :email, :login, :password, :last_activity)");
+
+
+for ($i =0;$i<25;$i++){
+echo $i;
+    $insertUsers->execute(array('name' => RandName(),'role' => RandRole(), 'email' => RandEmail(), 'login' => RandLogin(),
+        'password' => RandPass(), 'last_activity' => RandDateTime()));
 //    var_dump(array('title' => RandTitle2(), 'description' => Randtext(), 'price' => RandPrice(),
 //        'category_id' => RandID()));
-//}
-//echo "yes";
-//die();
+}
+echo "yes";
+die();
 /**
 // $insert = $pdo->prepare("INSERT INTO products(`description`,`price`, `categoty_id`) VALUES(?)");
 $insertCategories = $pdo->prepare("INSERT INTO categories(`title`) VALUES (?)" );
-$insertUsers = $pdo->prepare("INSERT INTO users(`name`,`email`,`login`, `password`, `last_activity`) 
-VALUES(:name, :email, :login, :password, :last_activity)");
+$insertUsers = $pdo->prepare("INSERT INTO users(`name`,`role`,`email`,`login`, `password`, `last_activity`)
+VALUES(:name, :role, :email, :login, :password, :last_activity)");
 
 $insertProducts = $pdo->prepare("INSERT INTO products(`title`, `description`, `price`, `category_id`)
  VALUES(:title, :description, :price, :category_id)");
@@ -111,7 +113,7 @@ for ($i = 0; $i < 10;$i++){
         'category_id' => $idLastCategory));
     $idLastProducts = $pdo->lastInsertId();
 
-    $insertUsers->execute(array('name' => RandName(), 'email' => RandEmail(), 'login' => RandLogin(),
+    $insertUsers->execute(array('name' => RandName(),'role' => RandRole(), 'email' => RandEmail(), 'login' => RandLogin(),
         'password' => RandPass(), 'last_activity' => RandDateTime()));
     $idLastUsers = $pdo->lastInsertId();
     $select = $pdo->query('SELECT price from products WHERE id ='. $idLastProducts);
