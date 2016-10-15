@@ -2,16 +2,18 @@
 // start session
 session_start();
 // all configuration
-include "config.php";
+include_once "config.php";
 // connector for MySQL
-include "database.php";
+include_once "database.php";
 // Function helpers
-include "repository.php";
+include_once "repository.php";
 // custom function
-include "helpers.php";
+include_once "helpers.php";
 // routing for site
-include "routing.php";
+include_once "routing.php";
+// admin check
+include_once "admin.check.php";
 // business logic
-include "controller.php";
+include_once "controller.php";
 
 

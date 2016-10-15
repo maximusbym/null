@@ -5,12 +5,10 @@ if ($action == 'login'){
 
     $autrizationOk = authorizationUser($pdo,$loginForm,$passwordForm);
 
-    if ($autrizationOk){
-         var_dump($autrizationOk);
+    if ($autrizationOk)  {
         $_SESSION['id'] = $autrizationOk[0]['id'];
         $_SESSION['role'] = $autrizationOk[0]['role'];
+        echo "well done";
     }
-
-
     view('login');
 }

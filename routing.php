@@ -2,7 +2,7 @@
 $routs = [
     'registration',
     'login',
-    'admin',
+    'myadmin',
     'guest',
     'getMessages',
     'postMessages',
@@ -30,14 +30,8 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
         $action = null;
         $subAction = null;
     }
+
 }
 else {
     $action = 'main';
-}
-
-if( $action == 'admin' ) {
-    if( $_SESSION['admin_user'] != 1 ) {
-        header('location: /login');
-        exit();
-    }
 }
