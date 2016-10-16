@@ -26,12 +26,18 @@
                 <li><a href="/catalog">Catalog</a></li>
                 <li><a href="/registration">Registration</a></li>
                 <li><a href="/login">Log in</a></li>
+                <li><a href="/basket">Basket</a></li>
             </ul>
         </div>
     </div>
 </div>
-<script src="templates/js/jquery-3.1.1.js"></script>
-<script src="templates/js/bootstrap.js"></script>
+<div class="cart">
+<!--    <p>Product count:--><?//= count($_SESSION['cart']);?><!--</p>-->
+    <p>Product count</p>
+    <?= ( count( $_SESSION['cart'] ) > 0 )  ? count($_SESSION['cart'])  :  ''    ?>
+</div>
+<script src="/templates/js/jquery-3.1.1.js"></script>
+<script src="/templates/js/bootstrap.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
 

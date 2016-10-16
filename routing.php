@@ -7,7 +7,9 @@ $routs = [
     'getMessages',
     'postMessages',
     'catalog',
-    'product'
+    'product',
+    'basket',
+    'add-product-to-cart'
 ];
 $action = null;
 $subAction = null;
