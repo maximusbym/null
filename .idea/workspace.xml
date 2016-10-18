@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f067e93-4b00-4711-94c4-709e133504b8" name="Default" comment="basket">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/add-product-to-cart.controller.php" afterPath="$PROJECT_DIR$/controllers/add-product-to-cart.controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/basket.controller.php" afterPath="$PROJECT_DIR$/controllers/basket.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/login.controller.php" afterPath="$PROJECT_DIR$/controllers/login.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.view.php" afterPath="$PROJECT_DIR$/templates/admin.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/basket.view.php" afterPath="$PROJECT_DIR$/templates/basket.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.php" afterPath="$PROJECT_DIR$/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.view.php" afterPath="$PROJECT_DIR$/templates/login.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/product.view.php" afterPath="$PROJECT_DIR$/templates/product.view.php" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,21 +86,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.controller.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="basket.controller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/basket.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="basket.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/basket.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="78">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +109,8 @@
       <file leaf-file-name="add-product-to-cart.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/add-product-to-cart.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="26">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -197,11 +188,11 @@
         <option value="$PROJECT_DIR$/templates/admin.view.php" />
         <option value="$PROJECT_DIR$/templates/product.view.php" />
         <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/controllers/basket.controller.php" />
         <option value="$PROJECT_DIR$/templates/login.view.php" />
         <option value="$PROJECT_DIR$/controllers/login.controller.php" />
         <option value="$PROJECT_DIR$/controllers/add-product-to-cart.controller.php" />
         <option value="$PROJECT_DIR$/templates/basket.view.php" />
+        <option value="$PROJECT_DIR$/controllers/basket.controller.php" />
       </list>
     </option>
   </component>
@@ -439,12 +430,12 @@
       <workItem from="1476627672792" duration="6006000" />
       <workItem from="1476732527821" duration="1907000" />
       <workItem from="1476802192155" duration="326000" />
-      <workItem from="1476804780984" duration="1597000" />
+      <workItem from="1476804780984" duration="1758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190324000" />
+    <option name="totallyTimeSpent" value="190485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/basket.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/login.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -893,18 +876,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/add-product-to-cart.controller.php">
+    <entry file="file://$PROJECT_DIR$/templates/basket.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="78">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basket.view.php">
+    <entry file="file://$PROJECT_DIR$/controllers/add-product-to-cart.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/basket.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
