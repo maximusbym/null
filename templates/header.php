@@ -32,9 +32,7 @@
     </div>
 </div>
 <div class="cart">
-<!--    <p>Product count:--><?//= count($_SESSION['cart']);?><!--</p>-->
-    <p>Product count</p>
-    <?= ( count( $_SESSION['cart'] ) > 0 )  ? count($_SESSION['cart'])  :  ''    ?>
+
 </div>
 <script src="/templates/js/jquery-3.1.1.js"></script>
 <script src="/templates/js/bootstrap.js"></script>

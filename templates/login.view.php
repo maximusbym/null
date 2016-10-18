@@ -8,6 +8,10 @@
             <p><label for="password">Password</label></p>
             <input id="password" name="password" class="form-control" required="" tabindex="2" type="password" value="">
         </div>
+        <div class="container">        <input type="checkbox" name="rememberMe"> remember me</div>
+        <br>
         <input type="submit" value="Log in" id="submit" class="btn btn-default"/>
+
+
     </form>
 </div>
