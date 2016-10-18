@@ -9,6 +9,6 @@ if ($action == 'add-product-to-cart'){
 }
 
 if ($action =='basket'){
-    
+
     view('basket');
 }

@@ -12,7 +12,7 @@ include "controllers/catalog.controller.php";
 include "controllers/product.controller.php";
 include "controllers/json.controller.php";
 include "controllers/main.controller.php";
-include "controllers/add-product-to-cart.controller.php";
+//include "controllers/add-product-to-cart.controller.php";
 
 
 
