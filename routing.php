@@ -9,7 +9,9 @@ $routs = [
     'catalog',
     'product',
     'basket',
-    'add-product-to-cart'
+    'add-product-to-cart',
+    'order',
+    'logout'
 ];
 $action = null;
 $subAction = null;

@@ -8,6 +8,7 @@ if ($action == 'login'){
     if ($autrizationOk)  {
         $_SESSION['id'] = $autrizationOk[0]['id'];
         $_SESSION['role'] = $autrizationOk[0]['role'];
+        var_dump($_SESSION['role']);
         echo "well done";
     }
 //    if ($rememberMe){

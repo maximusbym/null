@@ -4,7 +4,7 @@
             <tr>
                 <td>Product</td>
                 <td>Price</td>
-                <td>Delete</td>
+
             </tr>
         <?php
         $totalPrice = 0;
@@ -12,17 +12,17 @@
                 echo "<tr>";
                 echo "<td>".$value[0]['title']."</td>";
                 echo "<td>".$value[0]['price']."</td>";
-                echo "<td><a href=/basket/".$value[0]['id'].">X</a>";
+
                 $totalPrice += $value[0]['price'];
                 echo "<tr>";
             }
             echo "</table>";
-            echo "total price: ".$totalPrice;
+            echo "<div class='container'><h5>Total price: ".$totalPrice."</h5></div>";
         ?>
 
-            <div class="container">
-                <input type="submit" value="Order" class="btn btn-default">
-            </div>
-        </div>
+   <div class="container">
+        <input type="submit" value="Confirm" class="btn btn-default">
+   </div>
+    </div>
     </form>
 <?php

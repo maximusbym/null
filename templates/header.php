@@ -27,12 +27,17 @@
                 <li><a href="/registration">Registration</a></li>
                 <li><a href="/login">Log in</a></li>
                 <li><a href="/basket">Basket</a></li>
+                <li><a href="/logout">Log out</a></li>
             </ul>
         </div>
     </div>
 </div>
-<div class="cart">
-
+<div class="cart container">
+    Count products in basket:
+<?php if (count($_SESSION['cart']) > 0){
+    echo count($_SESSION['cart']);
+} else echo 0;
+?>
 </div>
 <script src="/templates/js/jquery-3.1.1.js"></script>
 <script src="/templates/js/bootstrap.js"></script>

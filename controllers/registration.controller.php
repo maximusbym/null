@@ -13,10 +13,10 @@ if($action == 'registration'){
             $isValid = validate($dataForm);
             if ($isValid) {
                 saveUser($pdo,$nameForm,$emailForm, $passwordForm,$loginForm);
-                echo "all done, welcome";
+          //      echo "all done, welcome";
             }
         }
-        else echo "<h3>This user already exist</h3>";
+       // else echo "<h3>This user already exist</h3>";
 
 
     }
