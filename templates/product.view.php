@@ -26,13 +26,7 @@ foreach ($data as $value){
     echo "Price: ".$value['price']."<br>";
     echo "Description: ".$value['description']."<br>";
     echo "Product ID: ".$value['id']."<br>";
-//var_dump($_SESSION['cart']);
-//    $_SESSION['cart']['products'][] = 1;
-//    $_SESSION['cart']['products'][] = 2;
-//    var_dump($_SESSION);
-//    $_SESSION['cart']['products2'][] = 0;
-//    $_SESSION['cart']['products1'][] = ;
-  //  var_dump($_SESSION);
+
 }
 ?>
     <button class="buy-product btn" data-id="<?=$data[0]['id']?>">BUY</button>

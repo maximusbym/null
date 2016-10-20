@@ -7,17 +7,29 @@
 
             </tr>
         <?php
-        $totalPrice = 0;
-            foreach ($data as $key => $value) {
-                echo "<tr>";
-                echo "<td>".$value[0]['title']."</td>";
-                echo "<td>".$value[0]['price']."</td>";
+            $totalPrice = 0;
+                foreach ($data as $key => $value) {
+                    if (isset($value[0]['title'])){
+                        echo "<tr>";
+                        echo "<td>".$value[0]['title']."</td>";
+                        echo "<td>".$value[0]['price']."</td>";
+                        $totalPrice += $value[0]['price'];
+                        echo "<tr>";
+                    }
+                }
+                echo "</table>";
+                echo "<div class='container'><h5>Total price: ".$totalPrice."</h5></div>";
 
-                $totalPrice += $value[0]['price'];
-                echo "<tr>";
-            }
-            echo "</table>";
-            echo "<div class='container'><h5>Total price: ".$totalPrice."</h5></div>";
+        if (isset($data['loginCheck'])){
+            echo "OK";
+            include "layouts/form.php";
+        }
+        else {
+            echo "NO";
+            include "layouts/not_registr.php";
+        }
+
+
         ?>
 
    <div class="container">

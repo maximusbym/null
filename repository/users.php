@@ -16,3 +16,10 @@ function authorizationUser($pdo,$param,$password){
     $userCheck = $user->fetchAll();
     return $userCheck;
 }
+function getUserInfo($pdo, $id){
+    $user = $pdo->query("SELECT * 
+                          FROM `users` 
+                          WHERE `id` ='{$id}' ");
+    $userGet = $user->fetchAll();
+    return $userGet;
+}

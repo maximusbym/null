@@ -1,14 +1,22 @@
 
 <?php
 if ($action == 'order'){
-    $arrProducts;
-    foreach ($_SESSION['cart'] as $value) {
-        $arrProducts[] = getProductById($pdo, $value);
-    }
-    $check = 0;
-    if (isset($_SESSION['role'])){
+    $session_cart = $_SESSION['cart'] ? $_SESSION['cart'] : null;
+    $arrData;
 
+    if ($session_cart){
+        foreach ($session_cart as $value) {
+            $arrData[] = getProductById($pdo, $value);
+        }
+    } else $arrData = null;
+
+    if (isset($_SESSION['id'])){
+        $user = getUserInfo($pdo,$_SESSION['id']);
+        $arrData['user'] = $user;
+        $arrData['loginCheck'] = 'login';
     }
-    else echo "<a href='/login'">login."</a>";
+    var_dump($arrData);
+
+    view('order',$arrData);
 
 }
