@@ -12,7 +12,8 @@ function getProductById($pdo, $id){
 //
 function getProductsByIds($pdo, $idArr){
     $arr = implode(",", $idArr);
-    $product = $pdo->query("SELECT * FROM `products` WHERE `id` IN ($arr)");
+    $product = $pdo->query("SELECT * FROM `products` WHERE `id` IN ({$arr})");
     $productArray = $product->fetchAll();
+    var_dump($productArray);
     return $productArray;
 }

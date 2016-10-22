@@ -1,20 +1,17 @@
 <?php
 if ($action == 'add-product-to-cart'){
-
     $productId = $_POST['id'];
-    if ($productId){
-        if (isset($_SESSION['cart'][$productId])){
+    foreach ($_SESSION['cart'] as $id => $count){
+        if ($id == $productId){
             $_SESSION['cart'][$productId]++;
         }
-        else {
-            $_SESSION['cart'][$productId] = 1;
-        }
     }
-    echo json_encode( $_SESSION['cart'] );
+    $_SESSION['cart'][] = $productId;
+
+    echo json_encode( [ 'amount'=> count($_SESSION['cart']) ] );
 }
 
 if ($action =='basket'){
-
     var_dump($_SESSION['cart']);
     $deletedId = isset($_GET['delete']) ? $_GET['delete'] : null;
     if ($deletedId) {
@@ -29,8 +26,7 @@ if ($action =='basket'){
 //    foreach ($_SESSION['cart'] as $value) {
 //        $arrProducts[] = getProductById($pdo, $value);
 //    }
-//    ar
-    $arrProducts = getProductsByIds($pdo,array_keys($_SESSION['cart']));
 
+    $arrProducts[] = getProductsByIds($pdo,$_SESSION['cart'] );
     view('basket',$arrProducts);
 }

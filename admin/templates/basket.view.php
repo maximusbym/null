@@ -4,7 +4,6 @@
             <tr>
                 <td>Product</td>
                 <td>Price</td>
-                <td>Count</td>
                 <td>Delete</td>
             </tr>
         <?php
@@ -13,11 +12,10 @@
             foreach ($data as $key => $value) {
 
                 echo "<tr>";
-                echo "<td>".$value['title']."</td>";
-                echo "<td>".$value['price']."</td>";
-                echo "<td>".$_SESSION['cart'][$value['id']]."</td>";
-                echo "<td><a href=/basket?delete=".$value['id'].">X</a>";
-                $totalPrice += $value['price'];
+                echo "<td>".$value[0]['title']."</td>";
+                echo "<td>".$value[0]['price']."</td>";
+                echo "<td><a href=/basket?delete=".$value[0]['id'].">X</a>";
+                $totalPrice += $value[0]['price'];
                 echo "<tr>";
             }
         }
