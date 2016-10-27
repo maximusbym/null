@@ -35,7 +35,12 @@
 <div class="cart container">
     Count products in basket:
 <?php if (count($_SESSION['cart']) > 0){
-    echo count($_SESSION['cart']);
+//    echo count($_SESSION['cart']);
+    $countProducts = 0;
+    foreach ($_SESSION['cart'] as $key => $value){
+        $countProducts += $value;
+    }
+    echo $countProducts;
 } else echo 0;
 ?>
 </div>

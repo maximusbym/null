@@ -9,6 +9,7 @@
                 method: "POST",
                 dataType: "JSON",
                 success: function( data ) {
+                    alert('yes');
                     if( data.amount > 0 ) {
                         $('.cart').html('In basket '+data.amount+' product');
                     }

@@ -11,7 +11,6 @@
         $totalPrice = 0;
         if($data){
             foreach ($data as $key => $value) {
-
                 echo "<tr>";
                 echo "<td>".$value['title']."</td>";
                 echo "<td>".$value['price']."</td>";
@@ -31,4 +30,5 @@
             </div>
         </div>
     </form>
+
 <?php

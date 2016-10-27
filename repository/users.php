@@ -20,6 +20,22 @@ function getUserInfo($pdo, $id){
     $user = $pdo->query("SELECT * 
                           FROM `users` 
                           WHERE `id` ='{$id}' ");
-    $userGet = $user->fetchAll();
+    $userGet = $user->fetch();
     return $userGet;
+}
+function getAllUsers($pdo){
+    $users = $pdo->query("SELECT *  FROM `users`");
+    $usersGet = $users->fetchAll();
+    return $usersGet;
+}
+function createUser($pdo, $paramArray){
+//save user func
+}
+function updateUser($pdo, $paramArray){
+
+}
+function deleteUser($pdo, $param){
+    $sql = "DELETE FROM `users` WHERE `id`=".$param;
+    $count = $pdo->exec($sql);
+    return $count;
 }

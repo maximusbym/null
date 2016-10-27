@@ -1,4 +1,6 @@
+<div class="container">
 <?php
+
 echo "<h1></h1>";
 foreach ($data as $value){
     $url = '/product/'.$value['id'];
@@ -7,3 +9,4 @@ foreach ($data as $value){
     echo "Price: ".$value['price']."<hr>";
 //  var_dump($value);
 }
+echo "</div>";

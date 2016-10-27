@@ -10,12 +10,11 @@ if ($action == 'add-product-to-cart'){
             $_SESSION['cart'][$productId] = 1;
         }
     }
-    echo json_encode( $_SESSION['cart'] );
+
+    echo json_encode( ['amount'=> count($_SESSION['cart'])] );
 }
 
 if ($action =='basket'){
-
-    var_dump($_SESSION['cart']);
     $deletedId = isset($_GET['delete']) ? $_GET['delete'] : null;
     if ($deletedId) {
         foreach ($_SESSION['cart'] as $key => $value){
