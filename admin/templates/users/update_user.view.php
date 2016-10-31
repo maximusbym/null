@@ -29,10 +29,16 @@
             </div>
 
             <div class="form-group">
+                <p><label for="city">City</label></p>
+                <input id="user_city" class="form-control" type="text" name="city" value="" required>
+            </div>
+
+            <div class="form-group">
                 <p><label for="login">last activity</label></p>
                 <input id="login" class="form-control" type="text" name="last_activity" value="<?=$data['last_activity']?>" required>
             </div>
 
+            <input id="user_cityID" class="form-control" type="hidden" name="cityId">
             <input type="submit" value="Update" id="submit" class="btn btn-default"/>
         </form>
     </div>

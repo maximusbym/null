@@ -1,13 +1,14 @@
 <?php
-
+die();
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 //include  "database.php";
 function RandName(){
     $randUserName = ['Max','Vitaliy', 'Dmitriy', 'Andriy', 'Katya',
-        'Ne Katya', 'Yanukovich', 'Putin', 'Ne Putin', 'Misha'];
-    return $randUserName[rand(0,9)];
+        'Ne Katya', 'Yanukovich', 'Putin', 'Ne Putin', 'Misha','User','fake','Ross','superman','random',
+        'pig','pen','apple'];
+    return $randUserName[rand(0,17)];
 }
 function RandTitle($i){
     $randTitle = ['Apple', 'Samsung','LG','Lenovo','HTC','Xiaomi','Onomi', 'Nokia', 'Kirpich', 'Lopata'];
@@ -25,6 +26,9 @@ function RandPrice(){
 function RandID(){
     return $random = rand(1, 20);
 }
+//function RandGeonameID(){
+//    return $random = rand(1, );
+//}
 function RandRole(){
     $random = rand(1,10);
     if ($random >= 10) {
@@ -78,22 +82,40 @@ function Randtext(){
 function RandRating(){
     return $rand = rand(0, 200);
 }
-$insertUsers = $pdo->prepare("INSERT INTO users(`name`,`role`,`email`,`login`, `password`, `last_activity`) 
-VALUES(:name, :role, :email, :login, :password, :last_activity)");
+function get($pdo){
+    $products = $pdo->query('SELECT `geonameid` FROM `geoname` GROUP BY `geonameid` 
+                            ORDER BY `geoname`.`geonameid` ASC');
+    $productsArray = $products->fetchAll();
+    return $productsArray;
+}
+$art = get($pdo);
+//var_dump($art);
+$count =count($art);
+$count = $count -1 ;
+//echo $count."<br>";
+//$rand2 = rand(0,$count);
+//echo $rand2;
+//var_dump($art[$rand2]['geonameid']);
+
+//var_dump($art);
 
 
-for ($i =0;$i<25;$i++){
-echo $i;
+$insertUsers = $pdo->prepare("INSERT INTO users(`name`,`role`,`email`,`login`, `password`, `last_activity`, `geonameid`) 
+VALUES(:name, :role, :email, :login, :password, :last_activity,:geonameid)");
+
+
+for ($i =0;$i<$count;$i++){
     $insertUsers->execute(array('name' => RandName(),'role' => RandRole(), 'email' => RandEmail(), 'login' => RandLogin(),
-        'password' => RandPass(), 'last_activity' => RandDateTime()));
+        'password' => RandPass(), 'last_activity' => RandDateTime(), 'geonameid' => $art[$i]['geonameid']));
 //    var_dump(array('title' => RandTitle2(), 'description' => Randtext(), 'price' => RandPrice(),
 //        'category_id' => RandID()));
 }
-echo "yes";
+//echo "<h1>ВОВА ОБНОВИ</h1>>";
 die();
-/**
+
 // $insert = $pdo->prepare("INSERT INTO products(`description`,`price`, `categoty_id`) VALUES(?)");
 $insertCategories = $pdo->prepare("INSERT INTO categories(`title`) VALUES (?)" );
+
 $insertUsers = $pdo->prepare("INSERT INTO users(`name`,`role`,`email`,`login`, `password`, `last_activity`)
 VALUES(:name, :role, :email, :login, :password, :last_activity)");
 
@@ -105,6 +127,20 @@ $insertOrders = $pdo->prepare("INSERT INTO orders(`user_id`, `product_id`,`creat
 $insertReviews = $pdo->prepare("INSERT INTO reviews(`user_id`, `product_id`,`created_at`, `text`, `rating`)
  VALUES(:user_id, :product_id,:created_at, :text, :rating)");
 // user_id INT, product_id INT, created_at DATETIME, text text(5000), rating smallint
+
+$iterator = 0;
+for ($i = 0; $i < 50000;$i++){
+
+
+    $insertUsers->execute(array('name' => RandName(),'role' => RandRole(), 'email' => RandEmail(), 'login' => RandLogin(),
+        'password' => RandPass(), 'last_activity' => RandDateTime()));
+
+    $iterator++;
+}
+echo $iterator;
+die();
+
+
 for ($i = 0; $i < 10;$i++){
     $insertCategories->execute(array(RandTitle($i)));
     $idLastCategory = $pdo->lastInsertId();
@@ -123,8 +159,8 @@ for ($i = 0; $i < 10;$i++){
       'delivered_at' => null, 'status' => RandStatus(), 'total_price' => $res[0]['price'] ));
     $insertReviews->execute(array('user_id' => $idLastUsers, 'product_id' => $idLastProducts, 'created_at' => RandDateTime(),
         'text' => Randtext(), 'rating' => RandRating()));
-
 }
+
 /**
  * CREATE TABLE orders  user_id, product_id, created_at DATETIME, delivered_at DATETIME default null, status enum('open','in progress','closed'), total_price int);
  */

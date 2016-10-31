@@ -3,7 +3,8 @@ $routs = [
     'main',
     'catalog',
     'users',
-    'products'
+    'products',
+    'autocomplete'
 ];
 $action = null;
 $subAction = null;

@@ -24,7 +24,7 @@ function getUserInfo($pdo, $id){
     return $userGet;
 }
 function getAllUsers($pdo){
-    $users = $pdo->query("SELECT *  FROM `users`");
+    $users = $pdo->query("SELECT *  FROM `users` LIMIT 100");
     $usersGet = $users->fetchAll();
     return $usersGet;
 }

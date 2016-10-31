@@ -14,6 +14,7 @@ include "controllers/json.controller.php";
 include "controllers/main.controller.php";
 include "controllers/order.controller.php";
 include "controllers/logout.controller.php";
+include "controllers/autocomplete.controller.php";
 
 
 

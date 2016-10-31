@@ -11,7 +11,8 @@ $routs = [
     'basket',
     'add-product-to-cart',
     'order',
-    'logout'
+    'logout',
+    'autocomplete'
 ];
 $action = null;
 $subAction = null;
